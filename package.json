@@ -1,11 +1,6 @@
 {
   "name": "rollup-starter-app",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-external-helpers": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.0.0",
@@ -17,7 +12,6 @@
     "serve": "^11.0.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.9.2",
     "@toruslabs/torus-embed": "^1.2.4",
     "date-fns": "^1.30.1",
     "fortmatic": "^2.0.5",

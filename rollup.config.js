@@ -3,7 +3,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
 import nodebns from "rollup-plugin-node-builtins";
 import nodeglob from "rollup-plugin-node-globals";
-import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
 
 // `npm run build` -> `production` is true
@@ -18,7 +17,6 @@ export default {
     sourcemap: true,
     intro: "const global = window;"
   },
-  external: id => id.indexOf("@babel/runtime") === 0,
   plugins: [
     nodebns(),
     nodeglob(),
@@ -26,11 +24,6 @@ export default {
     resolve({
       preferBuiltins: false,
 	  browser: true
-    }),
-    babel({
-      //   exclude: "node_modules/**",
-	  runtimeHelpers: true,
-	  externalHelpers: true
     }),
     resolve({
       preferBuiltins: false,
