@@ -1,0 +1,25 @@
+// .babelrc
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": ["last 2 versions"]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "absoluteRuntime": true,
+        "helpers": true,
+        "regenerator": true
+      }
+    ],
+    "@babel/plugin-external-helpers"
+  ]
+}
