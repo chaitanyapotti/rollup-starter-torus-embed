@@ -1,8 +1,5 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import json from "@rollup/plugin-json";
-import nodebns from "rollup-plugin-node-builtins";
-import nodeglob from "rollup-plugin-node-globals";
 import { terser } from "rollup-plugin-terser";
 
 // `npm run build` -> `production` is true
@@ -18,13 +15,6 @@ export default {
     intro: "const global = window;"
   },
   plugins: [
-    nodebns(),
-    nodeglob(),
-    json(),
-    resolve({
-      preferBuiltins: false,
-	  browser: true
-    }),
     resolve({
       preferBuiltins: false,
       browser: true
